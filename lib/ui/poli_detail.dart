@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import '../model/poli.dart';
 
 class PoliDetail extends StatefulWidget {
-  const PoliDetail({super.key});
+  final Poli poli;
+
+  const PoliDetail({super.key, required this.poli});
 
   @override
   State<PoliDetail> createState() => _PoliDetailState();
@@ -12,7 +14,7 @@ class _PoliDetailState extends State<PoliDetail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Detail Poli")),
+      appBar: AppBar(title: Text("Detail Poli")),
       body: Column(
         children: [
           SizedBox(height: 20),
